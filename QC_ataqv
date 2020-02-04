@@ -44,3 +44,6 @@ ataqv --peak-file $1.hqaa.bam.macs2_peaks.broadPeak --tss-file /path/to/mm10.tss
 mkarv --force $1.md.bam.web $1.md.bam.json.gz
 cd ..
 cp ./$1/$1.md.bam.json.gz ./json
+
+## consolidate all the samples QC reports ##
+mkarv -r calculate session_together *json.gz

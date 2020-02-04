@@ -14,7 +14,7 @@ ddspeak <- DESeqDataSetFromHTSeqCount(sampleTable=sampleTable,directory=director
 colData(ddspeak)
 summary(ddspeak)
 dim(ddspeak)
-
+ddspeak <- ddspeak[rowSums(counts(ddspeak))>=dim(ddspeak)[2],]
 ddspeak$genotype
 ddspeak$genotype <- factor(ddspeak$genotype,levels=c("lox","cre"))
 ddspeak$genotype

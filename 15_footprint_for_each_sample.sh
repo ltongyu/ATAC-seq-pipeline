@@ -11,7 +11,7 @@ echo /path/to/$f/$f.hqaa.bam
 make_cut_matrix  -d -b '(36-1500 1)' -p 8 /path/to/$f/$f.hqaa.bam wh_PPARg.bed.gz | gzip -c > ./$f/${f}_wh_PPARg.matrix.gz
 
 # run_centipepde.R and plot_aggregate_matrix.R is included in atactk packages
-Rscript run_centipede.R ./$f/${f}_beige_wh_PPARg.matrix.gz wh_PPARg.bed.gz ./$f/${f}_wh_PPARg.centipede.bed.gz
+Rscript run_centipede.R ./$f/${f}_wh_PPARg.matrix.gz wh_PPARg.bed.gz ./$f/${f}_wh_PPARg.centipede.bed.gz
 
 
 
